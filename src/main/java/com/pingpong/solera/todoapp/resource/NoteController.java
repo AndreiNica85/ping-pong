@@ -11,7 +11,8 @@ import com.pingpong.solera.todoapp.service.NoteService;
 
 @RestController
 public class NoteController {
-	@Autowired
+	
+		@Autowired
 	private NoteService ns;
 	
 	@GetMapping("/notes")

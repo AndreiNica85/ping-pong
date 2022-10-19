@@ -4,9 +4,12 @@ import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import jakarta.persistence.Id;
+
+
 public class Note {
-	private long id;
+
+	private int id;
 	private String descr;
 	private String text;
 	private LocalDate startDate;
@@ -15,7 +18,7 @@ public class Note {
 	private String link;
 	private int priority;
 
-	public Note(long id, String descr, String text, LocalDate startDate, LocalDate endDate, LocalDate estmDate, String link, int priority) {
+	public Note(int id, String descr, String text, LocalDate startDate, LocalDate endDate, LocalDate estmDate, String link, int priority) {
 		super();
 		this.id = id;
 		this.descr = descr;
@@ -27,11 +30,11 @@ public class Note {
 		this.priority = priority;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

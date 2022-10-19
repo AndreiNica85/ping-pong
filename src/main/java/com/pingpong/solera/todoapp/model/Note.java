@@ -1,8 +1,10 @@
-package model;
+package com.pingpong.solera.todoapp.model;
 
-import java.net.URI;
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Note {
 	private long id;
 	private String descr;
@@ -10,11 +12,10 @@ public class Note {
 	private LocalDate startDate;
 	private LocalDate endDate;
 	private LocalDate estmDate;
-	private URI link;
+	private String link;
 	private int priority;
 
-	public Note(long id, String descr, String text, LocalDate startDate, LocalDate endDate, LocalDate estmDate,
-			URI link, int priority) {
+	public Note(long id, String descr, String text, LocalDate startDate, LocalDate endDate, LocalDate estmDate, String link, int priority) {
 		super();
 		this.id = id;
 		this.descr = descr;
@@ -74,11 +75,11 @@ public class Note {
 		this.estmDate = estmDate;
 	}
 
-	public URI getLink() {
+	public String getLink() {
 		return link;
 	}
 
-	public void setLink(URI link) {
+	public void setLink(String link) {
 		this.link = link;
 	}
 
